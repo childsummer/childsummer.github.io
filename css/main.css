@@ -278,7 +278,7 @@ p {
   margin: 20px 0;
 }
 a {
-  color: #f1c40f;
+  color: #39c;
   text-decoration: none;
   border-bottom: 1px solid #999;
 }
@@ -889,7 +889,7 @@ pre .javascript .function {
 .translation {
   margin-top: -20px;
   font-size: 14px;
-  color: #999;
+  color: #ff2a2a;
 }
 .post:last-child .post-eof.post-eof.post-eof {
   display: none;
@@ -1030,7 +1030,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff1fff;
+  background: #fe1;
 }
 .sidebar-nav {
   margin: 0;
