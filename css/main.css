@@ -843,7 +843,7 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 25px;
   color: #fff;
-  background: #2f4f4f;
+  background: #39c;
   border-bottom: none;
   font-family: "PT Mono", Consolas, Monaco, Menlo, monospace;
 }
@@ -1030,7 +1030,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fe1;
+  background: #e07ecb;
 }
 .sidebar-nav {
   margin: 0;
