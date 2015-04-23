@@ -1,0 +1,49 @@
+---
+layout: default
+title: Archive
+---
+<div class="col-sm-12">
+    <div class="page-title">
+        {{ page.title }}
+    </div>
+    <div class="page-content">
+	
+	{% for post in site.posts %}
+	{% assign words = post.content | number_of_words %}
+	{% capture total_count %}{{forloop.length }}{% endcapture %}
+	{% endfor %} 
+	
+	Keep going, total <font  size =12px color=grey> {{total_count}} </font> posts
+        <ul class="page-list">
+            {% for post in site.posts %}
+			   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+               {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+               {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+               {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+               {% if forloop.first %}
+                   <h2><img class="icopanda" src="/0084-calendar.png"> {{this_year}}</h2>
+                   
+                   <ul>
+               {% endif %}
+               {% if post.archive !='1' %}
+                    <li>
+                    {{ post.date | date: "%D"}} » -{{ post.categories }}- <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a> <img class="tinypanda" src="/0151-hammer.png"><font size=0.3px> {{words}}</font>
+                    </li>
+				    {% if forloop.last %}
+                       
+                    {% else %}
+                       {% if this_year != next_year %}
+                       </ul>
+                       <h2><img class="icopanda" src="/0084-calendar.png"> {{next_year}}</h2>
+                      
+                       <ul>
+                       
+                           
+                          
+                       {% endif %}
+                   {% endif %}
+              {% endif %}
+            {% endfor %} 
+        </ul>
+    </div>
+</div>

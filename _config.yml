@@ -1,0 +1,23 @@
+name: Cild Summ
+description:  black sheep wall
+
+sass:
+  sass_dir: assets/css/_sass
+  style: :compressed
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+
+url: http://localhost:4000
+permalink: /:year/:month/:title/
+owner:
+    name: Jake Z
+    twitter: #
+    github: #
+    disqus_shortname: #
+
+ga_id: #
+ga_username: #
+
+timezone: Asia/Shanghai
