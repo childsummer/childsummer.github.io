@@ -1,23 +1,12 @@
-name: Cild Summ
-description:  black sheep wall
+# Site settings
+title: 稚子夏日
+email: childsummer (at) outlook.com
+description: > # this means to ignore newlines until "baseurl:"
+  人们并不知道要追求什么，<br>他们只知道正在追求什么。
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://childsummer.github.io" # the base hostname & protocol for your site
+twitter_username: #zixia
+github_username:  childsummer
 
-sass:
-  sass_dir: assets/css/_sass
-  style: :compressed
-
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-
-url: http://childsummer.github.io
-permalink: /:year/:month/:title/
-owner:
-    name: Jake Z
-    twitter: #
-    github: #
-    disqus_shortname: #
-
-ga_id: #
-ga_username: #
-
-timezone: Asia/Shanghai
+# Build settings
+markdown: kramdown

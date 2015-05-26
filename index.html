@@ -1,46 +1,19 @@
 ---
 layout: default
 ---
-<div class="col-sm-12">
-    <div class="page">
-        {% for post in site.posts %}
-		    {% capture this_cat %}{{ post.categories }}{% endcapture %}
-			{% assign words = post.content | number_of_words %}
-            {% if post.archive == false %}
-            <div class="page-item">
-                <div class="col-sm-8">
-                    <ul class="page-item-title">
-                        <li><time class="timeago meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>     -<font size=0.3px>{{this_cat | upcase }}</font>-  <img class="tinypanda" src="/0151-hammer.png"><font size=0.3px> {{words}}</font>
-                        <a class="meta pull-right comments-meta" href="{{ post.url | prepend: site.url }}#disqus_thread"> <img src="/0008-quill.png"></a></li>
-                        <li><a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 hide-on-phone">
-                    <ul class="page-item-title pull-right meta">
-                        <li><a href="{{ post.url | prepend: site.url }}#disqus_thread"><img src="/0008-quill.png"></a></li>
-                        <li><a href="{{ post.url | prepend: site.url }}"> <i class="fa fa-ellipsis-h"></i></a></li>
-                        <li><a class="pib-indicator"> <i class="fa fa-expand"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-12 page-item-body">
-                    {{post.excerpt}}
-                </div>
-            </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-<script>
-$(document).ready(function() {
-    $(".page").children().first().find(".page-item-body").css( "display", "block" );
-    $(".page").children().first().find(".pib-indicator")
-        .find("i").toggleClass("fa-compress").toggleClass("fa-expand");
 
-    $(".page-item .pib-indicator").click(function() {
-        var preview = $(this);
-        preview.find("i").toggleClass("fa-expand").toggleClass("fa-compress");
-        $(this).closest(".page-item").find(".page-item-body").toggle("slow", function() {});
-    });
-});
-</script>
+<div class="home">
+
+  <h1 class="page-heading">文章列表</h1> 
+
+  <ul class="post-list">
+    {% for post in site.posts %}    
+     {% assign words = post.content | number_of_words %}     
+	 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><font size=3em> {{ post.title }}</font> </a><font size=2em color=grey>................................................................................................................................................. {{ post.date | date: "%b %-d, %Y" }}</font> 
+      
+    {% endfor %}
+  </ul>
+
+
+
+</div>
