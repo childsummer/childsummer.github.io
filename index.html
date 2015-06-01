@@ -9,7 +9,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}    
      {% assign words = post.content | number_of_words %}     
-	 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><font size=3em> {{ post.title }}</font> </a><font size=2em color=grey>...................................................................................................................................... {{ post.date | date: "%b %-d, %Y" }}</font> 
+	 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><font size=3em> {{ post.title }}</font> </a><font size=2em color=grey>.................................................................................................................................. {{ post.date | date: "%b %-d, %Y" }}</font> 
       
     {% endfor %}
   </ul>
